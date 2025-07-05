@@ -1,0 +1,9 @@
+#app-tfan{
+    margin-top: 60px;
+    width: 100% !important;
+    height: 100% !important;
+    /* border: 2px solid red; */
+}
+#btn-nav{
+    cursor: pointer;
+}
