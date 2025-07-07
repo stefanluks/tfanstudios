@@ -1,4 +1,6 @@
 import tfan from './tfan.js';
+import Jogos from '../paginas/jogos/jogos.js';
+import Home from '../paginas/home/home.js';
 
 const app = document.getElementById('app-tfan');
 if (app) {
@@ -21,31 +23,38 @@ if (app) {
 }   
 
 window.onload = () => {
+    // Initialize the app with the Home page
+    Home.SetTela(app);
+    Home.Renderizar();
     const btnNavs = document.querySelectorAll('#btn-nav');
     btnNavs.forEach(btn => {
         btn.addEventListener('click', () => {
             const page = btn.getAttribute('page');
             btnNavs.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            app.innerHTML = ''; // Clear the app content
-            let url = window.location.href+`componentes/paginas/${page}.html`;
-            console.log(url); // Debugging log
-            fetch(`componentes/paginas/${page}.html`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    app.innerHTML = html; // Load the new page content
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                    app.innerHTML = '<p>Error loading page. Please try again later.</p>';
-                });
+            console.log(`Loading page: ${page}`);
+            loadPage(page);
         });
     });
 
-    btnNavs[0].click(); // Simulate a click on the first button to load the initial page    
+    // btnNavs[0].click(); // Simulate a click on the first button to load the initial page    
+    
+
+    function loadPage(page) {
+        switch (page) {
+            case 'jogos':
+                Jogos.SetTela(app);
+                Jogos.Renderizar();
+                break;
+            case 'originais':
+                // Load the original games page
+                break;
+            case 'sobre':
+                // Load the about page
+                break;
+            default:
+                Home.SetTela(app);
+                Home.Renderizar();
+        }
+    }
 }
