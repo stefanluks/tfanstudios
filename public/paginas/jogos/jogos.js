@@ -4,7 +4,7 @@ let url = window.location.href + "public/paginas/jogos/jogos.json";
 const Jogos = new TelaObject("Tfan Studios | Todos os Jogos");
 Jogos.CriarConteudo(
     `<div class="container">
-    <div id="jogos" class="w-100 d-flex align-items-center justify-content-start flex-wrap">
+    <div id="jogos" class="w-100 d-flex align-items-center justify-content-center flex-wrap">
         <div class="card m-2" style="width: 350px;" aria-hidden="true">
             <div class="img-card-loading"></div>
             <div class="card-body">
@@ -107,7 +107,6 @@ Jogos.CriarConteudo(
 let script = document.createElement("script");
 script.type = "text/javascript";
 script.text = `
-    console.log("Jogos carregando...");
     let url = window.location.href + "public/paginas/jogos/jogos.json";
     let jogosContainer = document.getElementById("jogos");
     setTimeout(() => {
@@ -131,6 +130,8 @@ script.text = `
                 body.appendChild(title);
                 let desc = document.createElement("p");
                 desc.className = "card-text";
+                desc.style.height = "100px";
+                desc.style.overflow = "hidden";
                 desc.textContent = jogo.descricao;
                 body.appendChild(desc);
                 let link = document.createElement("a");
