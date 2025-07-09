@@ -105,8 +105,10 @@ Jogos.CriarConteudo(
 );
 
 let script = document.createElement("script");
+script.id = "jogos-script";
 script.type = "text/javascript";
 script.text = `
+function carregarJogos() {
     let url = window.location.href + "public/paginas/jogos/jogos.json";
     let jogosContainer = document.getElementById("jogos");
     setTimeout(() => {
@@ -146,8 +148,8 @@ script.text = `
         }).catch(error => {
             console.error("Erro ao carregar os jogos:", error);
         });
-    }, 500);
-`;
+    }, 1000);
+}`;
 
 Jogos.SetScript(script);
 

@@ -32,7 +32,6 @@ window.onload = () => {
             const page = btn.getAttribute('page');
             btnNavs.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            console.log(`Loading page: ${page}`);
             loadPage(page);
         });
     });

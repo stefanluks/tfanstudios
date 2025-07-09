@@ -18,6 +18,14 @@ export default class TelaObject {
     Renderizar(){
         if(this.titulo) document.title = this.titulo;
         this.tela.innerHTML = this.conteudo;
-        if(this.script) document.body.appendChild(this.script);
+        
+        if(this.script){
+            if(document.body.querySelector("#jogos-script")){
+                let cod = document.body.querySelector("#jogos-script");
+            }else{
+                document.body.appendChild(this.script);
+            }
+            carregarJogos();
+        }
     }
 }
