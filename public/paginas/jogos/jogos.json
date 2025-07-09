@@ -1,8 +1,13 @@
 [
     {
-    "nome": "Bowio",
-    "img": "https://i.imgur.com/1k0b2aH.png",
-    "descricao": "Bowio é um jogo de plataforma onde você controla Bowio, um personagem que pode pular e atirar flechas. O objetivo é coletar moedas e derrotar inimigos enquanto avança pelos níveis.",
-    "link":"componentes/paginas/jogos/bowio/index.html"
+        "nome": "Bowio",
+        "img": "https://i.imgur.com/1k0b2aH.png",
+        "descricao": "Bowio é um jogo de plataforma onde você controla Bowio, um personagem que pode pular e atirar flechas. O objetivo é coletar moedas e derrotar inimigos enquanto avança pelos níveis.",
+        "link":"componentes/paginas/jogos/Bowio/index.html"
+    },{
+        "nome": "Zombie Atack",
+        "img": "https://i.imgur.com/1k0b2aH.png",
+        "descricao": "Zombie Atack é um jogo de ação onde você deve sobreviver a ondas de zumbis. Use armas e habilidades especiais para derrotar os inimigos e proteger sua base.",
+        "link":"componentes/paginas/jogos/ZombieAtack/index.html"
     }
 ]
