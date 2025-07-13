@@ -12,5 +12,11 @@
         "descricao": "Zombie Atack é um jogo de ação onde você deve sobreviver a ondas de zumbis. Use armas e habilidades especiais para derrotar os inimigos e proteger sua base.",
         "link":"componentes/jogos/ZombieAtack/index.html",
         "interno": false
+    },{
+        "nome": "Newbie Ninja",
+        "img": "public/imagens/jogos/zombie_atack.png",
+        "descricao": "Zombie Atack é um jogo de ação onde você deve sobreviver a ondas de zumbis. Use armas e habilidades especiais para derrotar os inimigos e proteger sua base.",
+        "link":"componentes/jogos/Newbie Ninja/index.html",
+        "interno": false
     }
 ]
