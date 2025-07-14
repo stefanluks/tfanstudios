@@ -1,5 +1,5 @@
 #app-tfan{
-    margin-top: 60px;
+    margin-top: 75px;
     width: 100% !important;
     height: 100% !important;
     /* border: 2px solid red; */
@@ -8,10 +8,106 @@
     cursor: pointer;
 }
 
+#unity-fullscreen-button{
+    width: 35px;
+    height: 35px;
+    z-index: 1000;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#game-page-btns{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+}
+
+.box-game-info{
+    background-color: black;
+    color: white;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative  ;
+}
+
+.btn-game-item{
+    width: 35px;
+    height: 35px;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-game-item.muted::after{
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.btn-game-item.muted::before{
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+#btn-voltar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+}
+
 .img-card-loading{
     width: 100%;
     height: 200px;
     background-color: #a1a1a1;
     border-radius: 5px;
     animation: loading 1.5s infinite;
+}
+
+.item-home-ad{
+    width: 95%;
+    border-radius: 10px;
+    margin: 5px;
+    animation: ad-border-show infinite 2s;
+}
+
+.item-home{
+    border-radius: 10px;
+    margin: 5px;
+    width: 350px;
+    height: 180px;
 }

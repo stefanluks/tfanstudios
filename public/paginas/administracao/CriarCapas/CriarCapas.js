@@ -101,7 +101,6 @@ CriarCapas.CriarConteudo(`
     </div>
 `);
 
-
 let script = document.createElement("script");
 script.id = "criar-capas-script";
 script.type = "text/javascript";

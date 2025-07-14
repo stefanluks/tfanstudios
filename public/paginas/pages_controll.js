@@ -3,6 +3,12 @@ import Home from '../paginas/home/home.js';
 import Adm from '../paginas/administracao/adm.js';
 import CriarCapas from '../paginas/administracao/CriarCapas/CriarCapas.js';
 
+import QuizRisadas from '../paginas/jogos_internos/QuizRisadas.js';
+import ZombieAtack from '../../componentes/jogos/ZombieAtack/ZombieAtack.js';
+import NewbieNinja from "../../componentes/jogos/NewbieNinja/NewbieNinja.js";
+import LBSC from "../../componentes/jogos/LBSC/LBSC.js";
+
+
 const app = document.getElementById('app-tfan');
 
 const PageController = {
@@ -15,6 +21,7 @@ const PageController = {
             Home.SetTela(app);
             Home.Renderizar();
         }
+        this.setupNavigation();
     },
 
     setupNavigation: function() {
@@ -31,6 +38,10 @@ const PageController = {
 
     loadPage: function(page) {
         switch (page) {
+            case 'home':
+                Home.SetTela(app);
+                Home.Renderizar();
+                break;
             case 'jogos':
                 Jogos.SetTela(app);
                 Jogos.Renderizar();
@@ -49,9 +60,25 @@ const PageController = {
                 CriarCapas.SetTela(app);
                 CriarCapas.Renderizar();
                 break;
-            default:
-                Home.SetTela(app);
-                Home.Renderizar();
+            case 'QuizRisadas':
+                // Load the QuizRisadas page
+                QuizRisadas.SetTela(app);
+                QuizRisadas.Renderizar();
+                break;
+            case 'ZombieAtack':
+                // Load the ZombieAtack game
+                ZombieAtack.SetTela(app);
+                ZombieAtack.Renderizar();
+                break;
+            case 'NewbieNinja':
+                // Load the NewbieNinja game
+                NewbieNinja.SetTela(app);
+                NewbieNinja.Renderizar();
+                break;
+            case 'LBSC':
+                // Load the Little ball saves christmas
+                LBSC.SetTela(app);
+                LBSC.Renderizar();
         }
     }
 };

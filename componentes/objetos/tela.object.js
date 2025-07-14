@@ -20,10 +20,11 @@ export default class TelaObject {
     }
 
     Renderizar(){
-        console.log("Renderizando tela: " + this.nome);
+        console.log(this.nome)
         if(this.titulo) document.title = this.titulo;
-        if(!this.htmlObject) this.tela.innerHTML = this.conteudo;
-        else{
+        if(!this.htmlObject){
+            this.tela.innerHTML = this.conteudo;
+        }else{
             this.tela.innerHTML = "";
             this.tela.appendChild(this.conteudo);
         }
@@ -40,6 +41,34 @@ export default class TelaObject {
                 case "jogos":
                     if(document.body.querySelector("#jogos-script")){
                         let cod = document.body.querySelector("#jogos-script");
+                    }else{
+                        document.body.appendChild(this.script);
+                    }
+                    break;
+                case "QuizRisadas":
+                    if(document.body.querySelector("#quiz-risadas-script")){
+                        let cod = document.body.querySelector("#quiz-risadas-script");
+                    }else{
+                        document.body.appendChild(this.script);
+                    }
+                    break;
+                case "zombie-atack":
+                    if(document.body.querySelector("#zombie-atack-script")){
+                        let cod = document.body.querySelector("#zombie-atack-script");
+                    }else{
+                        document.body.appendChild(this.script);
+                    }
+                    break;
+                case "newbie-ninja":
+                    if(document.body.querySelector("#newbie-script")){
+                        let cod = document.body.querySelector("#newbie-script");
+                    }else{
+                        document.body.appendChild(this.script);
+                    }
+                    break;
+                case "LBSC":
+                    if(document.body.querySelector("#lbsc-script")){
+                        let cod = document.body.querySelector("#lbsc-script");
                     }else{
                         document.body.appendChild(this.script);
                     }
@@ -75,4 +104,5 @@ export default class TelaObject {
     Redirecionar(pagina) {
         PageController.loadPage(pagina);
     }
+
 }

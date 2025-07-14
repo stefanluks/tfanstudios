@@ -25,5 +25,5 @@ if (app) {
 window.onload = () => {
     const btnNavs = document.querySelectorAll('#btn-nav');
     PageController.init();
-    pageController.SetupNavigation();    
+    // pageController.SetupNavigation();
 }
