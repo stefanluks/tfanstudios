@@ -1,6 +1,6 @@
 import tfan from './tfan.js';
-import Jogos from '../paginas/jogos/jogos.js';
-import Home from '../paginas/home/home.js';
+import PageController from '../paginas/pages_controll.js';
+
 
 const app = document.getElementById('app-tfan');
 if (app) {
@@ -23,37 +23,7 @@ if (app) {
 }   
 
 window.onload = () => {
-    // Initialize the app with the Home page
-    Home.SetTela(app);
-    Home.Renderizar();
     const btnNavs = document.querySelectorAll('#btn-nav');
-    btnNavs.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const page = btn.getAttribute('page');
-            btnNavs.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            loadPage(page);
-        });
-    });
-
-    // btnNavs[0].click(); // Simulate a click on the first button to load the initial page    
-    
-
-    function loadPage(page) {
-        switch (page) {
-            case 'jogos':
-                Jogos.SetTela(app);
-                Jogos.Renderizar();
-                break;
-            case 'originais':
-                // Load the original games page
-                break;
-            case 'sobre':
-                // Load the about page
-                break;
-            default:
-                Home.SetTela(app);
-                Home.Renderizar();
-        }
-    }
+    PageController.init();
+    // pageController.SetupNavigation();
 }
