@@ -19,6 +19,8 @@ QuizRisadas.CriarConteudo(
           </div>
         </div>
       </div>
+      <span class="w-100 text-center alert alert-warning">JOGO EM DESENVOLVIMENTO</div>
+    </div>
     `
 );
 
@@ -29,8 +31,7 @@ script.text = `
 
     btnVoltar.addEventListener("click", () => {
       window.location.href = "/";
-    })
-    
+    });    
 `;
 
 
